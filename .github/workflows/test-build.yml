@@ -14,8 +14,7 @@ jobs:
       # Runs Pester all *.tests.ps1 scripts
       - name: Run Pester tests
         run: |
-          Get-InstalledModule
           Install-Module Pester -Force
+          Write-Output "Run Pester $(Get-InstalledModule Pester | Select-Object -ExpandProperty Version) ..."
           Get-InstalledModule
-          # Write-Output "Run Pester $(Get-InstalledModule Pester | Select-Object -ExpandProperty Version) ..."
         shell: pwsh
