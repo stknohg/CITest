@@ -15,6 +15,7 @@ jobs:
       - name: Run Pester tests
         run: |
           Get-InstalledModule
-          Get-Module
+          Install-Module Pester -Force
+          Get-InstalledModule
           # Write-Output "Run Pester $(Get-InstalledModule Pester | Select-Object -ExpandProperty Version) ..."
         shell: pwsh
