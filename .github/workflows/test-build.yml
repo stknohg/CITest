@@ -2,7 +2,7 @@
 name: test-build
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   workflow_dispatch:
 jobs:
   # Pester test job
